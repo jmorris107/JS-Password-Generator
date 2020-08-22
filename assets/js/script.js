@@ -30,17 +30,17 @@ while(passwordLength <= 7 || passwordLength >= 129) {
 alert(`Your password will be ${passwordLength} characters.`);
 
 // Confirm characters in a password.
-var confirmNumericCharacters = confirm("Click OK to confirm include numeric characters. ");
-var confirmSpecialCharacters = confirm("Click OK to confirm include special characters. ");
-var confirmLowercaseLetters = confirm("Click OK to confirm include lowercase letters. ");
-var confirmUppercaseLetters = confirm("Click OK to confirm include uppercase letters. ");
-// Loop 
-while(confirmNumericCharacters === false && confirmSpecialCharacters === false && confirmLowercaseLetters === false && confirmUppercaseLetters){ 
+var confirmNumericCharacters = confirm("Click OK to confirm your password will include numeric characters. ");
+var confirmSpecialCharacters = confirm("Click OK to confirm your password will include special characters. ");
+var confirmLowercaseLetters = confirm("Click OK to confirm your password will include lowercase letters. ");
+var confirmUppercaseLetters = confirm("Click OK to confirm your password will include uppercase letters. ");
+// Loop forever to not confirming.
+while(confirmNumericCharacters === false && confirmSpecialCharacters === false && confirmLowercaseLetters === false && confirmUppercaseLetters === false){ 
   alert("Please choose at least one character.")
-var confirmNumericCharacters = confirm("Click OK to confirm include numeric characters. ");
-var confirmSpecialCharacters = confirm("Click OK to confirm include special characters. ");
-var confirmLowercaseLetters = confirm("Click OK to confirm include lowercase letters. ");
-var confirmUppercaseLetters = confirm("Click OK to confirm include uppercase letters. ");
+var confirmNumericCharacters = confirm("Click OK to confirm your password will include numeric characters. ");
+var confirmSpecialCharacters = confirm("Click OK to confirm your password will include special characters. ");
+var confirmLowercaseLetters = confirm("Click OK to confirm your password will include lowercase letters. ");
+var confirmUppercaseLetters = confirm("Click OK to confirm your password will include uppercase letters. ");
 }
 
 //Action to fix password.
@@ -66,7 +66,7 @@ console.log(passwordCharacters)
 
 // Strings to be filled loop selecting random characters from the array
 var randomPassword = ""
-
+//loop for random password.
 for (var i = 0; i < passwordLength; i++) {
   randomPassword = randomPassword + passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
   console.log(randomPassword)
